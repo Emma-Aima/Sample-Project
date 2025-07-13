@@ -262,7 +262,7 @@ def check_token():
     token = request.headers.get('Authorization')
     if token != 'Bearer YOUR_SECRET_KEY':
         return jsonify({'error': 'Unauthorized'}), 401
-weanwise_app/ ├── app.py ├── requirements.txt ├── templates/ │ └── index.html ├── static/ │ └── chart.js (optional) └── firebase-key.json (if using Firestore)
+# weanwise_app/ ├── app.py ├── requirements.txt ├── templates/ │ └── index.html ├── static/ │ └── chart.js (optional) └── firebase-key.json (if using Firestore)
 
 FROM python:3.11-slim
 WORKDIR /app
