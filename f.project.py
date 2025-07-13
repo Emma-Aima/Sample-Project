@@ -264,14 +264,3 @@ def check_token():
         return jsonify({'error': 'Unauthorized'}), 401
 # weanwise_app/ ├── app.py ├── requirements.txt ├── templates/ │ └── index.html ├── static/ │ └── chart.js (optional) └── firebase-key.json (if using Firestore)
 
-FROM python:3.11-slim
-WORKDIR /app
-COPY . /app
-RUN pip install --no-cache-dir -r requirements.txt
-EXPOSE 5000
-CMD ["python", "app.py"]
-docker build -t weanwise-health .
-docker run -p 5000:5000 weanwise-health
-gcloud auth login
-gcloud config set project YOUR_PROJECT_ID
-
