@@ -6,24 +6,23 @@ import numpy as np
 !pip install scikit-learn
 scikit-learn==1.4.2
 
-
 # Generate timestamps at 1-minute intervals
 timestamps = pd.date_range(start='2023-10-01', periods=100, freq='T')
 
 # Simulate health metrics
 heart_rate = np.random.randint(60, 100, size=100)
 blood_oxygen = np.random.randint(90, 100, size=100)
-activity_level = np.random.choice(['low', 'moderate', 'high'], size=100)
 
-# Assemble data into a DataFrame
+# Combine into DataFrame
 health_data = pd.DataFrame({
     'timestamp': timestamps,
     'heart_rate': heart_rate,
-    'blood_oxygen': blood_oxygen,
-    'activity_level': activity_level
+    'blood_oxygen': blood_oxygen
 })
 
+# Now this will work
 print(health_data.head())
+
 
 # --------- Second Cell: Basic Random Forest Model ---------
 from sklearn.ensemble import RandomForestClassifier
