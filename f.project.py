@@ -3,6 +3,9 @@
 # --------- First Cell: Simulate Health Data ---------
 import pandas as pd
 import numpy as np
+!pip install scikit-learn
+scikit-learn==1.4.2
+
 
 # Generate timestamps at 1-minute intervals
 timestamps = pd.date_range(start='2023-10-01', periods=100, freq='T')
