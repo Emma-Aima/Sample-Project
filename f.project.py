@@ -2,13 +2,15 @@
 
 # --------- First Cell: Simulate Health Data ---------
 import streamlit as st
+import subprocess
+import sys
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.preprocessing import StandardScaler
 from datetime import datetime, timedelta
-!pip install scikit-learn
+pip install scikit-learn
 scikit-learn==1.4.2
 
 # Generate timestamps at 1-minute intervals
